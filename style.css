@@ -1,0 +1,233 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links li a {
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+.nav-links li a:hover {
+  background: #0077ff;
+  color: white;
+  border-radius: 5px;
+}
+/* Base styles */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-top: 1px solid #ddd;
+  }
+
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #0077ff, #00bfff);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.hero span {
+  font-weight: bold;
+  color: #ffdb4d;
+}
+
+/* Section Base */
+.section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 3px solid #0077ff;
+  padding-left: 2rem;
+}
+.timeline-item {
+  margin-bottom: 2rem;
+}
+.timeline-item h3 {
+  color: #0077ff;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: white;
+  padding: 1rem;
+  border-left: 5px solid #00bfff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Contact */
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-section input,
+.contact-section textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-section button {
+  background: #0077ff;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.contact-section button:hover {
+  background: #005ecc;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+footer .socials a {
+  color: #ccc;
+  margin: 0 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    background: #fff;
+    padding: 1rem 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-section form {
+    padding: 0 1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
